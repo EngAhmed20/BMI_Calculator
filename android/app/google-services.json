@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "544047624810",
+    "project_id": "bmicalc-f7026",
+    "storage_bucket": "bmicalc-f7026.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544047624810:android:1556f3126c0f9f5e091013",
+        "android_client_info": {
+          "package_name": "com.example.bmi_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeuB2ylJ2s3FVhwCpyjX0LI5lu3B0l8II"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
