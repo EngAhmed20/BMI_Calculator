@@ -1,11 +1,8 @@
 import 'dart:math';
-
 import 'package:bloc/bloc.dart';
 import 'package:bmi_test/core/utils/cache_helper.dart';
-import 'package:bmi_test/features/home/presentaion/manager/models/home_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_3d_choice_chip/flutter_3d_choice_chip.dart';
@@ -13,6 +10,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
 import '../../../../../constants.dart';
+import '../models/home_model.dart';
 part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
@@ -143,7 +141,8 @@ class HomeCubit extends Cubit<HomeState> {
   ////get data
   List <DataModel>alldata=[];
 void getData(){
-    emit(getDataLoading());
+  alldata.clear();
+  emit(getDataLoading());
     FirebaseFirestore.instance.collection('data').orderBy('dateTime').get().then((value) {
      value.docs.forEach((element) {
        alldata.add(DataModel.fromJson(element.data()));});

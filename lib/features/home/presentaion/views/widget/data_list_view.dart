@@ -1,9 +1,9 @@
-import 'package:bmi_test/features/home/presentaion/manager/models/home_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../manager/home cubit/home_cubit.dart';
+import '../../../manager/models/home_model.dart';
+
 
 Widget ShowRecors(context,DataModel model)=>Card(
   elevation: 10,

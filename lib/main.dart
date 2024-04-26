@@ -1,16 +1,13 @@
 import 'package:bmi_test/constants.dart';
 import 'package:bmi_test/core/utils/cache_helper.dart';
-import 'package:bmi_test/features/home/presentaion/manager/home%20cubit/home_cubit.dart';
 import 'package:bmi_test/features/home/presentaion/views/home_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc_observe.dart';
-import 'features/auth/presentation/login_scr.dart';
-import 'features/auth/presentation/manager/login_cubit/login_cubit.dart';
+import 'features/home/manager/home cubit/home_cubit.dart';
 import 'features/splash/presentaion/views/splash_view.dart';
 import 'firebase_options.dart';
-
 Future <void> main()async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(

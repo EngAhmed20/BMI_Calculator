@@ -1,7 +1,5 @@
 import 'dart:math';
-
 import 'package:bmi_test/features/auth/presentation/login_scr.dart';
-import 'package:bmi_test/features/home/presentaion/manager/home%20cubit/home_cubit.dart';
 import 'package:bmi_test/features/home/presentaion/views/score_scr.dart';
 import 'package:bmi_test/features/home/presentaion/views/show_records.dart';
 import 'package:bmi_test/features/home/presentaion/views/widget/age_widget.dart';
@@ -16,6 +14,8 @@ import 'package:swipeable_button_view/swipeable_button_view.dart';
 import '../../../../core/utils/widgets/custom_button.dart';
 import '../../../../core/utils/widgets/shimmer_widget.dart';
 import 'package:intl/intl.dart';
+
+import '../../manager/home cubit/home_cubit.dart';
 
 
 class HomeView extends StatelessWidget {
@@ -63,6 +63,7 @@ class HomeView extends StatelessWidget {
                           height: cubit.height,
                           bmi: cubit.bmiScore,
                           dateTime: formattedDate, BMIstatus:cubit.bmiStatus);
+                      cubit.getData();
                       await Navigator.push(context,PageTransition(
                           child: ScoreScr(), type:PageTransitionType.fade
                       ) );

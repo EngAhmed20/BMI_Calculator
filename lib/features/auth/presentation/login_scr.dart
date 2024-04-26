@@ -5,11 +5,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:page_transition/page_transition.dart';
-
 import '../../../core/utils/cache_helper.dart';
 import '../../../core/utils/styles.dart';
 import '../../../core/utils/widgets/shimmer_widget.dart';
-import 'manager/login_cubit/login_cubit.dart';
+import '../manager/login_cubit/login_cubit.dart';
 
 class LoginScr extends StatelessWidget {
   const LoginScr({super.key});
